@@ -10,7 +10,7 @@ import ExitToAppRoundedIcon from "@material-ui/icons/ExitToAppRounded";
 import "./Header.scss";
 import { Avatar, IconButton } from "@material-ui/core";
 
-export default function Header() {
+export default function Header({ imageUrl, userName }) {
   return (
     <div className="header">
       <div className="headerLeft">
@@ -42,12 +42,8 @@ export default function Header() {
 
       <div className="headerRight">
         <div className="info">
-          <Avatar
-            src={
-              "https://scontent.fcmb11-1.fna.fbcdn.net/v/t1.6435-9/42527724_944797415718089_4811613765348884480_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=09cbfe&_nc_ohc=4wNHnAS52qAAX_u6vvT&_nc_ht=scontent.fcmb11-1.fna&oh=00_AT_rIx4eoYlqhNxwnqOCVK7GMzquOith7EOSOAQ36JCexg&oe=62A7D2B4"
-            }
-          />
-          <h4>Arkam</h4>
+          <Avatar src={imageUrl} />
+          <h4>{userName}</h4>
         </div>
         <IconButton>
           <AddRoundedIcon />
